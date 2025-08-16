@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm)">
+  <!-- UserName -->
+  <div class="mb-3 form-group">
+    <label for="exampleFormControlInput1" class="form-label">UserName</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="exampleFormControlInput1" 
+      placeholder="Your UserName" 
+      formControlName="userName">
+
+    <div class="alert alert-danger" 
+         *ngIf="loginForm.get('userName')?.errors && (loginForm.get('userName')?.touched || loginForm.get('userName')?.dirty)">
+      <p *ngIf="loginForm.get('userName')?.getError('required')">UserName is required</p>
+      <p *ngIf="loginForm.get('userName')?.getError('minlength')">Min length is 3 characters</p>
+      <p *ngIf="loginForm.get('userName')?.getError('maxlength')">Max length is 20 characters</p>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="mb-3 form-group">
+    <label for="email" class="form-label">Email address</label>
+    <input 
+      type="email" 
+      class="form-control" 
+      id="email" 
+      placeholder="name@example.com" 
+      formControlName="email">
+
+    <div class="alert alert-danger" 
+         *ngIf="loginForm.get('email')?.errors && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)">
+      <p *ngIf="loginForm.get('email')?.getError('required')">Email is required</p>
+      <p *ngIf="loginForm.get('email')?.getError('email')">Write a correct email</p>
+    </div>
+ 
+
+
+
+                <div class="mb-3 form-group">
+  <label for="password" class="form-label">Password</label>
+  <input 
+    [type] ="showPassword ? 'text' : 'password' " 
+    class="form-control" 
+    id="password" 
+    placeholder="Your Password" 
+    formControlName="password">
+
+  <small class="text-danger">
+    Follow this pattern: (0-9) repeated 3 to 5 times, then (a-z) repeated 3 to 5 times
+  </small>
+</div>
+
+<div class="alert alert-danger" 
+     *ngIf="loginForm.get('password')?.errors && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)">
+  <p *ngIf="loginForm.get('password')?.getError('required')">Password is required</p>
+  <p *ngIf="loginForm.get('password')?.getError('pattern')">Password is not valid</p>
+</div>
+
+
+
+                <button type="submit" [disabled]="loginForm.invalid" class="btn btn-danger">Login</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

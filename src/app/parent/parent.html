@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<div class="bg-success text-white fs-2 p-3">
+    Hellow from parent
+    <app-child [valueFromParent]="message" 
+    (SendDataToParent)="display($event)"
+    ></app-child>
+</div>
