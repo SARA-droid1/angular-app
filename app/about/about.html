@@ -1,0 +1,75 @@
+<!-- <p>about works!{{string_1}}</p>
+<div>
+    <h1>Hellow from about {{string_1}}</h1>
+    <h1>my age is {{age}}</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere vitae rem iste, n
+        ostrum quos repellat necessitatibus ratione officiis quo, natus eius inventore, 
+        aperiam corrupti dolorum ipsa aut totam distinctio voluptatibus.
+         Eveniet excepturi voluptas magni ea temporibus officiis necessitatibus repellat eaque,
+          totam neque aut quas laboriosam suscipit minima ab blanditiis dolorem aliquam atque nulla velit molestiae veritatis fuga? 
+          Necessitatibus nam quae ducimus praesentium. Minus animi obcaecati vel ad cumque delectus non, 
+        similique laborum dolore labore, praesentium facere necessitatibus eaque possimus provident recusandae itaque, officia ipsam corrupti.
+         Excepturi iste possimus autem odio a enim incidunt eveniet reiciendis, dicta cupiditate officiis animi</p>
+</div>
+
+<img [src]="img" width="300" alt="صورة من TypeScript" />
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<button class="btn btn-primary" (click)="sayHellow()">Hellow</button>
+
+<p *ngIf="isLoggedInn; else notLogged">مرحبًا بك!</p>
+<ng-template #notLogged>
+  <p>من فضلك سجلي الدخول</p>
+</ng-template>
+<p [ngClass]="{ 'text-success': isOnline, 'text-danger': !isOnline }">
+  حالة الاتصال
+</p>
+
+<button class="btn btn-primary" (click)="login()">تسجيل الدخول</button>
+
+<p *ngIf="isLoggedIn; else notLoggedIn" [ngClass]="{ 'text-success': isLoggedIn }">
+  مرحبًا بك!
+</p>
+
+<ng-template #notLoggedIn>
+  <p class="text-danger">من فضلك سجلي الدخول أولاً</p>
+</ng-template>
+
+
+<ul>
+  <li *ngFor="let product of products">
+    {{product}}
+  </li>
+</ul>
+<p [ngStyle]="{ 'color': isAvailable ? 'green' : 'red' }">
+  {{ isAvailable ? 'متاح' : 'غير متاح' }}
+</p>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="10">This number = 10</p>
+  <p *ngSwitchCase="50">This number = 50</p>
+  <p *ngSwitchCase="0">This number = 0</p>
+  <p *ngSwitchDefault>NO THING</p>
+</div>
+
+<p class="b-3"
+[ngClass]="{
+  'bg-danger':isOnline,
+  'text-white':age < 10
+}"
+
+>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, 
+  beatae repudiandae? Libero voluptas rem,
+   eveniet eius aut ipsum ullam illum necessitatibus quas quos iure,
+    saepe omnis vitae, sint itaque similique!</p>
+    <p
+    [ngStyle]="{
+      'color':isOnline? 'green':'red',
+      'font-size':age < 10? '20px' : '15px'
+    }"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, 
+  beatae repudiandae? Libero voluptas rem,
+   eveniet eius aut ipsum ullam illum necessitatibus quas quos iure,
+    saepe omnis vitae, sint itaque similique!</p> -->
